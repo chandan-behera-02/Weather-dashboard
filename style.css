@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/*root {
+  --color-primary-dark: #2c3e50; 
+  --color-primary-light: #3498db;
+  --color-bg-main: #ecf0f1; 
+  --color-bg-card: #ffffff; 
+  --color-text-dark: #34495e;      
+  --color-text-light: #ffffff;  
+  --color-border: #bdc3c7; 
+
+  --font-family-main: 'Poppins', sans-serif; 
+
+  --spacing-unit: 1rem; 
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+}*/
+:root{
+  --color-primary-dark:#2c3e50;
+  --color-primary-light:#3498db;
+  --color-bfg-main: #ecf0f1;
+  --color-bg-card:#ffffff;
+  --color-text-dark:#34495e;
+  --color-text-light:#ffffff;
+  --color-border:#bdc3c7;
+  --font-family-main: 'poppins', sans-serif;
+  --spacing-unit:1rem;
+  --border-radius-sm:4px;
+  --border-radius-md:8px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,h1,h2,p,form {
+  margin: 0;
+}
+body{
+    /*background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;*/
+    background-color: var(--color-bfg-main);
+    color:var(--color-text-dark);
+    font-family: var(--font-family-main);
+    line-height: 1.5;
+}
+header h1{
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 50px;
+    font-weight: 900;
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-light);
+    padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+}
+#history-section h2 {
+  margin-top: 1.5rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+#history-container {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+/* Style for each dynamically created history button */
+.history-btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.history-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.loader,.error-message{
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+.loader {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #555; 
+  text-align: center;
+  padding: 2rem 0; 
+}
+.error-message {
+  color: #d32f2f;
+  background-color: #ffebee;
+  border: 1px solid #d32f2f;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem; 
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+#srch{
+    text-align: center;
+    margin-top: 30px;
+}
+#srch input{
+    width: 200px;
+    margin: 5px 15px;
+    border-radius: 0.5rem;
+    font: inherit;
+    border: 2px solid var(--color-border);
+    transition: border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+#srch input:focus{
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25);
+}
+#srch button{
+    background-color: var(--color-primary-light);
+    color: var(--color-text-light);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font: inherit;
+    transition: background-color 0.25s ease-in-out;
+}
+#srch button:hover{
+  background-color: var(--color-primary-dark);
+}
+#loc{
+  display: flex;
+  justify-content: space-evenly;
+}
+#Weather_data{
+    width: 300px;
+    height: 200px;
+    border-radius: 1.5rem;
+    background-color: antiquewhite;
+    margin: 30px 10px;
+    padding: 15px;
+}
+
+#forecast{
+  display: flex;
+}
+.forecast-card {
+  flex: 1;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-unit);
+  margin: 10px 20px;
+  text-align: center;
+}
+
+
+
+
+@media media-type and (media-feature: value) {
+
+}
+@media screen and (max-width:878px) {
+  html{
+    font-size: 15px;
+  }
+  header h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  #history-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #forecast{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:600px) {
+  html{
+    font-size: 14px;
+  }
+  header h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  #forecast{
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Live Weather Forecasting</h1></header>
+
+    <div id="loader" class="loader hidden">Loading...</div>
+    <div id="error-container" class="error-message hidden" aria-live="polite"></div>
+    
+    <section id="srch">
+        <form action="" id="search-form">
+            <input type="text" placeholder="Enter the city name" id="search-input">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section id="history-section">
+          <h2>Search History</h2>
+          <div id="history-container"></div>
+    </section>
+    <main>
+        <section id="loc">
+            <div id="Weather_data">
+                <h1 id="city"></h1><br>
+                <p id="temp"></p>
+                <p id="hum"></p>
+                <p id="wind"></p>
+            </div>
+        </section>
+        
+    </main>
+
+        <h2>5-Days Weather Forecasting</h2><br>
+        <section id="forecast">
+            <div id="forecast-container" class="forecast-cards-container">
+                
+            </div>
+        </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
